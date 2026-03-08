@@ -21,6 +21,8 @@ pip install -e /path/to/expert-cli
 
 This puts `expert-cli` on your PATH.
 
+[uv](https://docs.astral.sh/uv/) is a single tool to replace pip, pip-tools, pipx, poetry, pyenv, twine, virtualenv, and more.
+
 Also requires the `expert` binary on your PATH. See [Expert installation](https://github.com/elixir-lang/expert).
 
 ## Usage

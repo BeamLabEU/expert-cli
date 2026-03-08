@@ -111,6 +111,29 @@ CLI formats and prints the result
 
 The daemon handles the full LSP handshake including the `client/registerCapability` response that Expert requires (and that trips up most LSP clients including Claude Code's built-in LSP tool).
 
+## AI agent integration
+
+Add the following to your Elixir project's `CLAUDE.md`, `AGENTS.md`, or equivalent instructions file to give your AI coding agent access to Elixir code intelligence:
+
+```markdown
+## Elixir Code Intelligence
+
+Use `expert-cli` for Elixir code lookups when you need to understand existing code.
+The daemon auto-starts on first call, subsequent calls are fast (~100ms).
+
+- `expert-cli hover <file>:<line>:<col>` — get docs, types, and specs
+- `expert-cli definition <file>:<line>:<col>` — go to definition
+- `expert-cli references <file>:<line>:<col>` — find all references
+- `expert-cli symbols <file>` — list symbols in a file
+- `expert-cli search "<query>"` — search workspace symbols
+- `expert-cli --json <command>` — get raw JSON output for programmatic use
+
+Line and column numbers are 1-based (as shown in editors).
+Run from the project root directory (where mix.exs is).
+```
+
+This works with any agent that can run shell commands — Claude Code, Cursor, Windsurf, Codex, etc.
+
 ## Requirements
 
 - Python 3.10+

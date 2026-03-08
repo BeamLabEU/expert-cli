@@ -12,16 +12,16 @@ Useful for:
 ## Install
 
 ```bash
-pip install -e .
+# Using uv (recommended)
+uv tool install --editable /path/to/expert-cli
+
+# Or with pip
+pip install -e /path/to/expert-cli
 ```
 
-Or run without installing:
+This puts `expert-cli` on your PATH.
 
-```bash
-PYTHONPATH=/path/to/expert-cli python -m expert_cli <command>
-```
-
-Requires the `expert` binary on your PATH. See [Expert installation](https://github.com/elixir-lang/expert).
+Also requires the `expert` binary on your PATH. See [Expert installation](https://github.com/elixir-lang/expert).
 
 ## Usage
 
